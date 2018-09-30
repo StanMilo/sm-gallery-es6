@@ -1,0 +1,103 @@
+.container {
+    width: 1125px;
+    overflow: hidden;
+    background-color: #eee;
+    position: relative;
+}
+
+.photo_thumbs {
+    flex-wrap: wrap;
+    cursor: pointer;
+    max-width: 680px;
+    height: 120px;
+    overflow: hidden;
+    float: left;
+
+    bottom: -117px;
+    position: relative;
+}
+
+.photo_preview {
+    float: right;
+    overflow: hidden;
+    padding: 10px;
+    width: 200px;
+    height: 190px;
+    margin-top: 26px;
+}
+
+.photo_preview img {
+    width: 200px;
+}
+
+.txt_preview {
+    overflow: hidden;
+    float: right;
+    height: 250px;
+    padding: 10px;
+    width: 200px;
+}
+
+.photo_thumb {
+    padding: 10px;
+    width: 150px;
+    float: left;
+}
+
+.photo_thumb > img {
+    width: 130px;
+}
+
+.gallery_modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    align-self: center;
+    margin: auto;
+    position: relative;
+}
+
+.gallery_arrow {
+    position: absolute;
+    top: 50%;
+    border: solid darkseagreen;
+    border-width: 0 15px 15px 0;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.gallery_arrow_left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 30%;
+}
+
+.gallery_arrow_right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 30%;
+}
+.unstyled-button {
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+}
+
+.btn-container {
+    position: absolute;
+    bottom: 72px;
+    left: 660px;
+}

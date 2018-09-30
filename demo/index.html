@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../src/gallery.js"></script>
+</head>
+<body>
+    <h1>Gallery</h1>
+    <div id="js_container" class="container">
+        <span class="btn-container"><button id="js_next_photo" class="unstyled-button" type="button"><img src="images/next.png" height="24"/></button></span>
+        <div id="js_photo_thumbs" class="photo_thumbs"></div>
+        <div  class="txt_preview">
+            <p id="js_photo_text"></p>
+        </div>
+        <div id="js_photo_preview" class="photo_preview"></div>
+    </div>
+<script>
+
+    const photos = [
+        {src:"images/p1.jpg", text:"Lorem ipsum dolor amet raw denim food truck small batch chillwave leggings. "},
+        {src:"images/p2.jpg", text:"1 pabst kitsch, plaid blog bicycle rights roof party XOXO single-origin coffee."},
+        {src:"images/p3.jpg", text:"Readymade sustainable 8-bit, austin viral fam tattooed synth post-ironic hashtag "},
+        {src:"images/p4.jpg", text:"Semiotics brunch migas schlitz microdosing umami selvage lumbersexua"},
+        {src:"images/p5.jpg", text:"Stumptown mlkshk pabst thundercats direct trade semiotics."},
+        {src:"images/p6.jpg", text:"Asymmetrical try-hard forage, messenger bag pinterest actually heirloom shabby chic."},
+        {src:"images/p3.jpg", text:"90's before they sold out semiotics franzen swag fixie."},
+    ];
+
+    for (i = 0; i < photos.length; i++) {
+       let imgSrc = photos[i].src;
+       let text = photos[i].text
+       let image = `<div class="photo_thumb js_photo_thumb" data-img-text="${text}" data-img-src="${imgSrc}"><img src="${imgSrc}" alt="doggy" data-url="${imgSrc}" /></div>`
+       document.getElementsByClassName("photo_thumbs")[0].innerHTML += image
+    }
+    galleryInit();
+    // fetch("https://dog.ceo/api/breed/chow/images")
+    //     .then(response => response.json())
+    //     .then(photos => {
+    //         photos.message
+    //             .filter(photo => photos.message.indexOf(photo) <= 20)
+    //             .forEach(photo => {
+    //                 let image = `<div class="photo_thumb js_photo_thumb" data-img-src="${photo}"><img src="${photo}" alt="doggy" data-url="${photo}" /></div>`
+    //                 document.getElementsByClassName("photo_thumbs")[0].innerHTML += image
+    //             })
+    //             galleryInit()    
+    //     })
+</script>
+</body>
+</html>
